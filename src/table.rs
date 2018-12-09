@@ -1,4 +1,4 @@
-const TABLE_SIZE: usize = 15;
+const SIZE: usize = 15;
 
 pub struct Position {
     pub row: usize,
@@ -7,20 +7,20 @@ pub struct Position {
 
 impl Position {
     pub fn pos(row: usize, col: usize) -> Position {
-        assert!(row < TABLE_SIZE);
-        assert!(col < TABLE_SIZE);
+        assert!(row < SIZE);
+        assert!(col < SIZE);
         return Position { row, col };
     }
 }
 
 pub struct Table {
-    cells: [[u8; TABLE_SIZE]; TABLE_SIZE]
+    cells: [[u8; SIZE]; SIZE],
 }
 
 impl Table {
     pub fn new() -> Table {
-        return Table{
-            cells: [[0; TABLE_SIZE]; TABLE_SIZE]
+        return Table {
+            cells: [[0; SIZE]; SIZE],
         };
     }
 }

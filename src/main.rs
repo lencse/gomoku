@@ -1,10 +1,10 @@
-mod game;
+mod table;
 
 fn main() {
-    let p = game::Position::pos(3, 5);
-    let mut t1 = game::Table::new();
+    let p = table::Position::pos(3, 5);
+    let mut t1 = table::Table::new();
     t1.put(&p, 1);
-    t1.put(&game::Position::pos(2, 1), 2);
+    t1.put(&table::Position::pos(2, 1), 2);
 
-    println!("({}, {})", t1.val(&p), t1.val(&game::Position::pos(2, 1)));
+    println!("({}, {})", t1.val(&p), t1.val(&table::Position::pos(2, 1)));
 }
